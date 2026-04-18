@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT Calculadora IMC</title>
+
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="data">
+            <div class="form">
+                <div class="row">
+                    <table id="imcTable"></table>
+                </div>
+
+                <div class="row">
+                    <label>Altura</label>
+                    <input id="altura" value="0.00" placeholder="0.00" />
+                </div>
+
+                <div class="row">
+                    <label>Peso</label>
+                    <input id="peso" value="0.00" placeholder="0.00" />
+                </div>
+
+                <button type="button" class="action">Calcular</button>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="data">
+            Seu IMC &eacute; <span id="imc"></span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
