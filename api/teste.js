@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const port = 3000;
 
-app.use(express.json());
+app.use(express.json(), cors());
 
 app.get('/health', (req, res) => {
     res.send("It's alive!");
@@ -40,13 +42,13 @@ app.get('/api/table', (req, res) => {
 });
 
 app.post('/api/calculator', (req, res) => {
-    const {height, weight, teste} = req.body;
+    const {height, weight} = req.body;
 
     const imc = calculaImc(height, weight);
     const imcDesc = translateImc(imc);
 
     const person = {
-        height, weight, imc, imcDesc, teste
+        height, weight, imc, imcDesc
     }
 
     res.json(person)
